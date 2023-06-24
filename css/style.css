@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --celeste: hsl(193, 38%, 86%);
+    --neon-verde: hsl(150, 100%, 66%);
+    --grisblue: hsl(217, 19%, 38%);
+    --gris-oscuro: hsl(217, 19%, 24%);
+    --azul-oscuro: hsl(218, 23%, 16%);
+
+}
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--azul-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    width: 575px;
+    height: 375px;
+    background-color: var(--gris-oscuro);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto p {
+    color: var(--neon-verde);
+    margin-bottom: 25px;
+}
+
+.texto h2 {
+    color: var(--celeste);
+}
+
+.reproducir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    gap: 30px;
+    bottom: 245px;
+}
+
+.boton {
+    width: 32px;
+    height: auto;
+}
+
+.reproducir-boton {
+    background-color: var(--neon-verde);
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+}
+
+.reproducir-boton:hover {
+    background-color: var(--neon-verde);
+    -webkit-box-shadow: 0px 0px 19px 10px rgba(83, 255, 171, 1);
+    -moz-box-shadow: 0px 0px 19px 10px rgba(83, 255, 171, 1);
+    box-shadow: 0px 0px 19px 10px rgba(83, 255, 171, 1);
+}
+
+.separador-movil {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        width: 375px;
+        height: 375px;
+        background-color: var(--gris-oscuro);
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto p {
+        color: var(--neon-verde);
+        margin-bottom: 25px;
+    }
+
+    .texto h2 {
+        color: var(--celeste);
+    }
+
+    .reproducir {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        gap: 30px;
+        bottom: 210px;
+    }
+    .reproducir-boton:hover {
+        background-color: var(--neon-verde);
+        -webkit-box-shadow: 0px 0px 19px 10px rgba(83, 255, 171, 1);
+        -moz-box-shadow: 0px 0px 19px 10px rgba(83, 255, 171, 1);
+        box-shadow: 0px 0px 19px 10px rgba(83, 255, 171, 1);
+    }
+    
+
+    .boton {
+        width: 32px;
+        height: auto;
+    }
+
+    .reproducir-boton {
+        background-color: var(--neon-verde);
+        padding: 20px;
+        border-radius: 50px;
+        display: flex;
+    }
+
+    .separador-pc {
+        display: none;
+    }
+
+    .separador-movil {
+        display: block;
+    }
+}
